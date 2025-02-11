@@ -29,5 +29,5 @@ func main() {
 	r.NoRoute(func(ctx *gin.Context) {
 		ctx.File("404.html")
 	})
-	r.Run(":1234")
+	r.Run(":8000")
 }
