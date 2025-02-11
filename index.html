@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개인정보처리방침 생성기</title>
+</head>
+<body>
+    <h1>개인정보처리방침 생성기</h1>
+    <form action="/privacy" method="post">
+        <label for="service_name">서비스명:</label>
+        <input type="text" id="service_name" name="service_name" required><br><br>
+
+        <label for="company_name">회사명:</label>
+        <input type="text" id="company_name" name="company_name" required><br><br>
+
+        <label for="email">문의 이메일:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label>수집하는 개인정보 항목:</label><br>
+        <input type="checkbox" name="collected_data" value="이름"> 이름<br>
+        <input type="checkbox" name="collected_data" value="이메일"> 이메일<br>
+        <input type="checkbox" name="collected_data" value="전화번호"> 전화번호<br>
+        <input type="checkbox" name="collected_data" value="주소"> 주소<br>
+        <input type="checkbox" name="collected_data" value="결제 정보"> 결제 정보<br>
+        <input type="checkbox" name="collected_data" value="위치 정보"> 위치 정보<br>
+
+        <button type="submit">개인정보처리방침 생성</button>
+    </form>
+</body>
+</html>

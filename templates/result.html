@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개인정보처리방침</title>
+</head>
+<body>
+    <h1>{{ .ServiceName }} 개인정보처리방침</h1>
+    <p>본 개인정보처리방침은 {{ .CompanyName }}이(가) 운영하는 "{{ .ServiceName }}" 서비스에 적용됩니다.</p>
+
+    <h2>1. 수집하는 개인정보 항목</h2>
+    <p>당사는 다음과 같은 개인정보를 수집합니다<br>
+    <ul>
+        {{ range .CollectedData }}
+        <li>{{.}}</li>
+        {{end}}
+    </ul>
+</p>
+    <h2>2. 개인정보 수집 목적</h2>
+    <p>당사는 수집된 정보를 다음과 같은 목적으로 활용합니다:</p>
+    <ul>
+        <li>서비스 제공 및 운영</li>
+        <li>고객 문의 응대 및 지원</li>
+        <li>서비스 품질 향상 및 보안 강화</li>
+        <li>법적 요구 사항 준수</li>
+    </ul>
+
+    <h2>3. 개인정보 보유 및 이용 기간</h2>
+    <p>당사는 이용자의 개인정보를 수집 및 이용 목적이 달성된 후에는 지체 없이 파기합니다.</p>
+
+    <h2>4. 문의처</h2>
+    <p>개인정보 보호 관련 문의는 {{ .Email }}로 연락해 주세요.</p>
+
+    <br>
+    <textarea rows="30" cols="150" id="copy" readonly>    
+<h1>{{ .ServiceName }} 개인정보처리방침</h1>
+<p>본 개인정보처리방침은 {{ .CompanyName }}이(가) 운영하는 "{{ .ServiceName }}" 서비스에 적용됩니다.</p>
+
+<h2>1. 수집하는 개인정보 항목</h2>
+<p>당사는 다음과 같은 개인정보를 수집합니다<br>
+
+
+<ul>
+    {{ range .CollectedData }}
+    <li>{{.}}</li>
+    {{ end }}
+</ul>
+</p>
+<h2>2. 개인정보 수집 목적</h2>
+<p>당사는 수집된 정보를 다음과 같은 목적으로 활용합니다:</p>
+<ul>
+    <li>서비스 제공 및 운영</li>
+    <li>고객 문의 응대 및 지원</li>
+    <li>서비스 품질 향상 및 보안 강화</li>
+    <li>법적 요구 사항 준수</li>
+</ul>
+
+<h2>3. 개인정보 보유 및 이용 기간</h2>
+<p>당사는 이용자의 개인정보를 수집 및 이용 목적이 달성된 후에는 지체 없이 파기합니다.</p>
+
+<h2>4. 문의처</h2>
+<p>개인정보 보호 관련 문의는 {{ .Email }}로 연락해 주세요.</p>
+    </textarea><br>
+    <button onclick="Copy()">복사하기</button>
+    <button onclick="window.location.href='/'">다시 생성하기</button>
+</body>
+<script>
+    function Copy(){
+        let copy=document.getElementById("copy");
+        copy.select();
+        document.execCommand("copy");
+        alert("복사 완료");
+    }
+    
+</script>
+</html>
